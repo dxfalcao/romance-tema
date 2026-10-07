@@ -245,6 +245,27 @@ input.cart-quantity-input:focus{box-shadow:0 0 0 2px #4A6779!important}
 .product-info-description p.fecho{margin-top:18px;font-style:italic}
 @media(min-width:768px){.product-info-description h2{font-size:24px}.product-info-description p.lead{font-size:18px}}
 
+/* 11.05 · COMPLETE O CONJUNTO (secao de produtos complementares; script romConjunto no tema.js)
+   De 1 a 4 itens o carrossel vira grade na largura toda: 1-2 itens em cards deitados, 3-4 em pe. */
+.rom-conjunto{background:#F5F2EC;padding:44px 0 36px!important;margin:36px 0!important}
+.rom-conjunto .heading-block{margin-bottom:26px}
+.rom-conjunto .swiper-wrapper{display:grid!important;gap:20px;transform:none!important;height:auto!important}
+.rom-conjunto .js-item-product{width:auto!important;margin:0!important;background:#FFFFFF;padding:16px;border:1px solid rgba(28,37,48,.08)}
+.rom-conjunto-1 .swiper-wrapper{grid-template-columns:minmax(0,640px)}
+.rom-conjunto-2 .swiper-wrapper{grid-template-columns:repeat(2,minmax(0,1fr))}
+.rom-conjunto-3 .swiper-wrapper{grid-template-columns:repeat(3,minmax(0,1fr))}
+.rom-conjunto-4 .swiper-wrapper{grid-template-columns:repeat(4,minmax(0,1fr))}
+.rom-conjunto-1 .js-item-product,.rom-conjunto-2 .js-item-product{display:grid!important;grid-template-columns:45% minmax(0,1fr);gap:22px;align-items:center}
+.rom-conjunto-1 .product-item-information,.rom-conjunto-2 .product-item-information{padding:0!important}
+.rom-conjunto-1 .product-item-name,.rom-conjunto-2 .product-item-name{font-size:17px!important;line-height:1.35!important}
+.rom-conjunto .products-section-prev-container,.rom-conjunto .products-section-next-container,.rom-conjunto .swiper-pagination{display:none!important}
+@media(max-width:767px){
+.rom-conjunto{padding:32px 0 24px!important}
+.rom-conjunto-2 .swiper-wrapper{grid-template-columns:1fr}
+.rom-conjunto-3 .swiper-wrapper,.rom-conjunto-4 .swiper-wrapper{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.rom-conjunto .js-item-product{padding:10px}
+}
+
 /* 11.1 · Selo de origem (inserido pelo script do rodape) */
 .rom-origem{display:flex;gap:18px;align-items:flex-start;margin:26px 0;border:1px solid #1C2530;background:#FFFFFF;padding:20px 22px;transition:background-color .35s ease-out}
 .rom-origem:hover{background:#F5F2EC}

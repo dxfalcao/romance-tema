@@ -376,10 +376,28 @@
   }
  }
 
+ /* 11 · COMPLETE O CONJUNTO: a secao "para comprar com esse produto" (produtos complementares)
+    era um carrossel de 4 por vez; com poucos itens eles ficavam pequenos e sobrava espaco.
+    De 1 a 4 itens, desliga o carrossel e a secao vira grade na largura toda (1-2 itens: cards
+    deitados, foto a esquerda). 5 ou mais: mantem o carrossel. O visual fica no tema.css. */
+ function romConjunto() {
+  var sec = document.getElementById('ns-section-complementary_products');
+  if (!sec || sec.getAttribute('data-rom-conj')) return;
+  var cont = sec.querySelector('.js-recommendations-swiper') || sec.querySelector('.swiper-container');
+  var n = cont ? cont.querySelectorAll('.js-item-product').length : 0;
+  romConjunto.t = (romConjunto.t || 0) + 1;
+  if (!cont || !n || !cont.swiper) { if (romConjunto.t !== 20) setTimeout(romConjunto, 500); return; }
+  sec.setAttribute('data-rom-conj', '1');
+  if (n > 4) return;
+  cont.swiper.destroy(true, true);
+  sec.classList.add('rom-conjunto', 'rom-conjunto-' + n);
+ }
+
  function romExtra() {
   romLogo();
   romGaleriaCor();
   romCardsCor();
+  romConjunto();
  }
 
  function iniciar() {
