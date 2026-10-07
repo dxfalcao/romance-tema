@@ -4,8 +4,8 @@ CSS e script do tema **Ipanema** da loja Romance Enxovais (Nuvemshop), servidos 
 
 | Arquivo | Carregado por | URL |
 |---|---|---|
-| `tema.css` | *Configurações globais → CSS personalizado* (`@import`) | `https://cdn.jsdelivr.net/gh/dxfalcao/romance-tema@main/tema.min.css` |
-| `tema.js` | *Rodapé → Selos personalizados → Código do selo* (carregador `<img onload>`) | `https://cdn.jsdelivr.net/gh/dxfalcao/romance-tema@main/tema.min.js` |
+| `tema.css` | *Configurações globais → CSS personalizado* (`@import`) | `https://cdn.jsdelivr.net/gh/dxfalcao/romance-tema@main/tema.css` |
+| `tema.js` | *Rodapé → Selos personalizados → Código do selo* (carregador `<img onload>`) | `https://cdn.jsdelivr.net/gh/dxfalcao/romance-tema@main/tema.js` |
 
 Os campos da Nuvemshop têm limite de tamanho (CSS ~14 mil caracteres, selo 50 mil), por isso o código mora aqui e os campos só apontam para ele.
 
