@@ -29,7 +29,7 @@
   var alvos = document.querySelectorAll(
    '.ns-section .heading-block, .section-featured-categories a,' +
    '.section-banners .media, .section-hero h1, .section-hero h2, .section-hero p,' +
-   '.section-faq .accordion-item, .rom-manifesto, .rom-facts'
+   '.section-faq .accordion-item, .rom-manifesto, .rom-facts, .rom-lojas'
   );
   if (!alvos.length) return;
   revelou = true;
@@ -410,7 +410,7 @@
      maps: 'Romance Enxovais, Avenida Bem-te-vi, 111 - Moema, São Paulo - SP, 04524-030' }
   ];
   var div = document.createElement('div');
-  div.className = 'rom-lojas rom-rv';
+  div.className = 'rom-lojas';
   var h = '<p class="rom-kicker">nossas lojas · endereços e horários</p><div class="rom-lojas-grid">';
   LOJAS.forEach(function (L) {
    h += '<div class="rom-loja"><b>' + L.nome + '</b>' +
