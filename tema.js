@@ -393,6 +393,65 @@
   sec.classList.add('rom-conjunto', 'rom-conjunto-' + n);
  }
 
+ /* NOSSAS LOJAS: injeta os cartoes das 2 lojas fisicas antes da assinatura do rodape
+    e um JSON-LD (schema.org) dizendo ao Google que o site pertence a operacao com 2 lojas. */
+ function romLojas() {
+  // a rodape() move a assinatura p/ a area legal; os cartoes entram no fim do .rom-seals, apos a faixa de vantagens
+  var alvo = document.querySelector('.rom-seals');
+  if (!alvo || document.querySelector('.rom-lojas')) return;
+  var LOJAS = [
+   { nome: 'Brás — a matriz, desde 1994', rua: 'Rua Oriente, 386 · Brás', cid: 'São Paulo/SP · CEP 03016-000',
+     hor: ['Segunda a sexta · 8h às 17h', 'Sábado · 8h às 15h30'],
+     tel: '(11) 2693-1297', telHref: '+551126931297', wa: '5511998492004', waFmt: '(11) 99849-2004',
+     maps: 'Romance Enxovais, Rua Oriente, 386 - Brás, São Paulo - SP, 03016-000' },
+   { nome: 'Moema', rua: 'Avenida Bem-te-vi, 111 · Moema', cid: 'São Paulo/SP · CEP 04524-030',
+     hor: ['Segunda a sábado · 10h às 19h'],
+     tel: '(11) 5093-8791', telHref: '+551150938791', wa: '5511991123511', waFmt: '(11) 99112-3511',
+     maps: 'Romance Enxovais, Avenida Bem-te-vi, 111 - Moema, São Paulo - SP, 04524-030' }
+  ];
+  var div = document.createElement('div');
+  div.className = 'rom-lojas rom-rv';
+  var h = '<p class="rom-kicker">nossas lojas · endereços e horários</p><div class="rom-lojas-grid">';
+  LOJAS.forEach(function (L) {
+   h += '<div class="rom-loja"><b>' + L.nome + '</b>' +
+    '<p>' + L.rua + '<br>' + L.cid + '</p>' +
+    L.hor.map(function (x) { return '<p class="rom-loja-hor">' + x + '</p>'; }).join('') +
+    '<div class="rom-loja-acoes">' +
+    '<a href="https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(L.maps) + '" target="_blank" rel="noopener">como chegar</a>' +
+    '<a href="tel:' + L.telHref + '">' + L.tel + '</a>' +
+    '<a href="https://wa.me/' + L.wa + '" target="_blank" rel="noopener">WhatsApp ' + L.waFmt + '</a>' +
+    '</div></div>';
+  });
+  div.innerHTML = h + '</div>';
+  alvo.appendChild(div);
+
+  var ld = {
+   '@context': 'https://schema.org',
+   '@graph': [
+    { '@type': 'Organization', '@id': 'https://www.romanceenxovais.com.br/#org', name: 'Romance Enxovais',
+      legalName: 'Romance Enxovais Cama Mesa e Banho Ltda', url: 'https://www.romanceenxovais.com.br/',
+      foundingDate: '1994', email: 'contato@romanceenxovais.com.br', telephone: '+5511998492004' },
+    { '@type': 'HomeGoodsStore', name: 'Romance Enxovais - Brás', branchOf: { '@id': 'https://www.romanceenxovais.com.br/#org' },
+      url: 'https://www.romanceenxovais.com.br/', telephone: '+551126931297',
+      address: { '@type': 'PostalAddress', streetAddress: 'Rua Oriente, 386', addressLocality: 'São Paulo', addressRegion: 'SP', postalCode: '03016-000', addressCountry: 'BR' },
+      openingHoursSpecification: [
+       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'], opens: '08:00', closes: '17:00' },
+       { '@type': 'OpeningHoursSpecification', dayOfWeek: 'Saturday', opens: '08:00', closes: '15:30' }
+      ] },
+    { '@type': 'HomeGoodsStore', name: 'Romance Enxovais - Moema', branchOf: { '@id': 'https://www.romanceenxovais.com.br/#org' },
+      url: 'https://www.romanceenxovais.com.br/', telephone: '+551150938791',
+      address: { '@type': 'PostalAddress', streetAddress: 'Avenida Bem-te-vi, 111', addressLocality: 'São Paulo', addressRegion: 'SP', postalCode: '04524-030', addressCountry: 'BR' },
+      openingHoursSpecification: [
+       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'], opens: '10:00', closes: '19:00' }
+      ] }
+   ]
+  };
+  var s = document.createElement('script');
+  s.type = 'application/ld+json';
+  s.text = JSON.stringify(ld);
+  document.head.appendChild(s);
+ }
+
  function romExtra() {
   romLogo();
   romGaleriaCor();
@@ -402,6 +461,7 @@
 
  function iniciar() {
   try { rodape(); } catch (e) {}
+  try { romLojas(); } catch (e) {}
   try { selo(); } catch (e) {}
   try { romLupa(); } catch (e) {}
   try { reveal(); } catch (e) {}
