@@ -245,6 +245,10 @@ input.cart-quantity-input:focus{box-shadow:0 0 0 2px #4A6779!important}
 .product-info-description p.fecho{margin-top:18px;font-style:italic}
 @media(min-width:768px){.product-info-description h2{font-size:24px}.product-info-description p.lead{font-size:18px}}
 
+/* 11.04 · DESCONTO A VISTA: a Nuvemshop escreve "R$ x com Boleto" (Pix e boleto tem o mesmo desconto).
+   O tema.js (romPix) troca para "R$ x no Pix"; ate la o "com Boleto" fica invisivel. */
+.rom-js .payment-discount-price-product-container > span:not(.js-payment-discount-price-product):not([data-rom-pix]){visibility:hidden}
+
 /* 11.05 · COMPLETE O CONJUNTO (secao de produtos complementares; script romConjunto no tema.js)
    De 1 a 4 itens o carrossel vira grade na largura toda: 1-2 itens em cards deitados, 3-4 em pe. */
 .rom-conjunto{background:#F5F2EC;padding:44px 0 36px!important;margin:36px 0!important}

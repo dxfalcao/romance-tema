@@ -452,6 +452,27 @@
   document.head.appendChild(s);
  }
 
+ /* DESCONTO A VISTA: troca "com Boleto" por "no Pix" (mesmo desconto; Pix vende mais).
+    Reaplica quando a Nuvemshop reescreve o rotulo (troca de variacao, rolagem infinita, compra rapida). */
+ function romPix() {
+  function trocar() {
+   [].forEach.call(document.querySelectorAll('.payment-discount-price-product-container'), function (c) {
+    var nome = c.querySelector('.js-payment-discount-name-product');
+    if (!nome) return;
+    var com = nome.previousElementSibling;
+    if (/boleto/i.test(nome.textContent)) nome.textContent = 'Pix';
+    if (com && !com.className && /^\s*com\s*$/i.test(com.textContent)) com.textContent = 'no';
+    nome.setAttribute('data-rom-pix', '1');
+    if (com && !com.className) com.setAttribute('data-rom-pix', '1');
+   });
+  }
+  trocar();
+  if (romPix.obs) return;
+  var espera = null;
+  romPix.obs = new MutationObserver(function () { clearTimeout(espera); espera = setTimeout(trocar, 60); });
+  romPix.obs.observe(document.body, { childList: true, subtree: true, characterData: true });
+ }
+
  function romExtra() {
   romLogo();
   romGaleriaCor();
@@ -462,6 +483,7 @@
  function iniciar() {
   try { rodape(); } catch (e) {}
   try { romLojas(); } catch (e) {}
+  try { romPix(); } catch (e) {}
   try { selo(); } catch (e) {}
   try { romLupa(); } catch (e) {}
   try { reveal(); } catch (e) {}
