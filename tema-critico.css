@@ -1,0 +1,128 @@
+/* Romance Enxovais · CSS crítico (gerado por gerar-critico.mjs a partir de tema.css; não editar à mão) */
+@font-face{font-family:'Jost';font-style:normal;font-weight:300;font-display:swap;src:url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Jost';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Jost';font-style:normal;font-weight:500;font-display:swap;src:url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Jost';font-style:normal;font-weight:600;font-display:swap;src:url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Jost';font-style:normal;font-weight:700;font-display:swap;src:url(https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+@font-face{font-family:'Parisienne';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/parisienne/v14/E21i_d3kivvAkxhLEVZpQyhwDw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
+:root{--rom-clip:polygon(0 0,100% 0,100% 100%,0 100%)}
+body{background:#F5F2EC;color:#1C2530;font-family:Jost,sans-serif;font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
+body.template-category,body.template-product,body.template-search{background:#FFFFFF}
+::selection{background:#4A6779;color:#FFFFFF}
+@media(min-width:1440px){.container{max-width:1340px}}
+a{transition:color .28s ease-out,opacity .28s ease-out}
+h1,h2,h3,h4,h5{font-family:Jost,sans-serif!important;font-weight:500;letter-spacing:normal;line-height:1.32;text-transform:none}
+.heading-block{position:relative;font-family:Jost,sans-serif!important;font-size:clamp(20px,2.4vw,28px)!important;font-weight:500!important;letter-spacing:.14em;line-height:1.35;text-transform:uppercase;margin-bottom:28px;padding-bottom:14px;border-bottom:1px solid #1C2530}
+.heading-block h2,.heading-block h3{font-family:Jost,sans-serif!important;font-size:inherit;margin:0}
+.heading-block h2,.heading-block h3,.heading-block strong,.heading-block b,
+.section-faq .accordion-item-toggle-text strong{font-weight:inherit!important;text-transform:inherit;letter-spacing:inherit;line-height:inherit}
+.page-header-title{font-family:Jost,sans-serif!important;font-size:clamp(21px,2.6vw,30px)!important;font-weight:500!important;letter-spacing:.12em;line-height:1.35;text-transform:uppercase}
+.product-name{font-family:Jost,sans-serif!important;font-size:clamp(19px,2.2vw,26px)!important;font-weight:500!important;letter-spacing:.02em;line-height:1.4;text-transform:none!important;margin-bottom:12px}
+.product-item-name{font-family:Jost,sans-serif!important;font-weight:500;letter-spacing:-.01em;text-transform:none}
+.btn,.btn-primary,.btn-secondary,.btn-tertiary,.btn-outline{
+border-radius:0!important;font-family:Jost,sans-serif!important;
+font-weight:700;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+padding:16px 28px;border-width:1px;border-style:solid;
+background-image:linear-gradient(#1C2530,#1C2530);background-repeat:no-repeat;
+background-size:0 100%;background-position:left center;
+transition:background-size .42s ease-out,color .3s ease-out,border-color .3s ease-out}
+.btn:hover,.btn-primary:hover,.btn-secondary:hover,.btn-tertiary:hover,.btn-outline:hover{background-size:100% 100%;color:#F5F2EC!important;border-color:#1C2530!important}
+.btn-primary{background-color:#4A6779!important;color:#FFFFFF!important;border-color:#4A6779!important}
+.btn-secondary,.btn-outline{background-color:transparent!important;color:#1C2530!important;border-color:#1C2530!important}
+.btn-underlined{border-radius:0!important;font-family:Jost,sans-serif!important;font-size:12px;letter-spacing:.12em;text-transform:uppercase;background-image:none}
+.btn-big{padding:19px 34px;font-size:13px}
+.btn-small{padding:11px 18px;font-size:11px}
+.btn.btn-link{padding:0;border:0!important;background-image:none!important}
+.btn.btn-link:hover{color:#4A6779!important}
+[class*=quantity] .btn{padding:0!important;min-width:0!important;border-width:0!important;background-image:none!important}
+.adbar,.adbar-static,.adbar-slider,.adbar-marquee{background:#4A6779!important;color:#FFFFFF!important}
+.adbar-item,.adbar-marquee-content{font-family:Jost,sans-serif!important;font-size:11.5px;font-weight:500;letter-spacing:.18em;text-transform:uppercase;padding:12px 0}
+.adbar-item a,.adbar-marquee-content a{color:#FFFFFF!important;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.45);padding-bottom:1px;transition:border-color .3s ease-out}
+.adbar-item a:hover{border-color:#FFFFFF}
+.section-navigation-bar,.navigation-bar,.js-navigation-bar{background-color:#4A6779!important;color:#FFFFFF!important}
+.navigation-bar a,.navigation-bar span,.navigation-bar p{color:#FFFFFF!important}
+.navigation-bar{font-family:Jost,sans-serif!important;font-size:11.5px;font-weight:500;letter-spacing:.16em;text-transform:uppercase}
+.js-head-main,.head-main{background:#F5F2EC!important;color:#1C2530!important;border-bottom:1px solid #1C2530;transition:box-shadow .35s ease-out,background-color .35s ease-out}
+.rom-scrolled .js-head-main,.rom-scrolled .head-main{box-shadow:0 12px 34px rgba(28,37,48,.09)}
+.sticky-header-wrapper{transition:box-shadow .35s ease-out}
+.head-row{padding-top:16px;padding-bottom:16px}
+.logo-text,.logo-text-container{font-family:Jost,sans-serif!important;font-weight:700;letter-spacing:.01em;text-transform:uppercase}
+.header-icon,.header-utility,.header-account,.header-cart{border-radius:0!important}
+.header-icon{transition:background-color .3s ease-out;padding:8px}
+.header-icon:hover{background:rgba(74,103,121,.1)}
+.header-account-label,.header-cart-text{font-family:Jost,sans-serif!important;font-size:11px;letter-spacing:.08em;text-transform:none}
+.header-cart .js-cart-widget-amount,.js-cart-widget-amount.badge{
+background:#4A6779!important;color:#FFFFFF!important;border-radius:0!important;
+font-family:Jost,sans-serif!important;font-size:10px;font-weight:700;
+min-width:19px;height:19px;line-height:19px;text-align:center}
+.search-form{border-radius:0!important;border:0!important;border-bottom:1px solid #1C2530!important;background:transparent!important;transition:border-color .3s ease-out}
+.search-form:focus-within{border-bottom-color:#4A6779!important}
+.search-input{background:#FFFFFF!important;box-shadow:none!important;letter-spacing:.02em}
+.js-item-product,.product-item{border-radius:0!important;background:transparent}
+.product-item-image-container{background:#FFFFFF;border-radius:0!important}
+.product-item-image-featured,.product-item-image-secondary{border-radius:0!important}
+.product-item-information{padding-top:16px}
+.product-item-name{font-size:16px;line-height:1.25;-webkit-line-clamp:3!important}
+.product-item-price{font-family:Jost,sans-serif!important;font-weight:700;font-size:17px;letter-spacing:-.02em;color:#1C2530}
+.product-item-price-compare{font-family:Jost,sans-serif!important;font-weight:400;font-size:13px;color:#6B6963;text-decoration:line-through}
+.product-item-installments,.payment-discount-price-product{font-family:Jost,sans-serif!important;font-size:11.5px;letter-spacing:.02em;color:#59574F}
+.product-item-payment-discount,.payment-discount-price-product-container,.payment-discount-price-product{color:#4A6779!important}
+.product-item-stock-notice,.js-product-stock,.js-last-product,.js-latest-products-available{color:#8E4F57!important}
+.quickshop-actions{border-radius:0!important}
+.quickshop-actions .btn{width:100%;font-size:11px;letter-spacing:.16em;padding:14px 10px}
+.notification-cart-discount-badge{background-color:#4A6779!important}
+.labels.product-labels{gap:6px}
+.label,.label-secondary{border:0!important;border-radius:0!important;background:#1C2530!important;color:#F5F2EC!important;font-family:Jost,sans-serif!important;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:7px 10px;line-height:1}
+.product-item-discount{justify-self:start;min-width:0;background:#8E4F57!important;color:#FFFFFF!important;border-radius:0!important;font-family:Jost,sans-serif!important;font-size:10px;font-weight:700;letter-spacing:.12em;padding:7px 10px}
+.section-product-list .swiper-button-next,.section-product-list .swiper-button-prev,
+.section-featured-categories .swiper-button-next,.section-featured-categories .swiper-button-prev{border-radius:0!important}
+@media(max-width:1279px){.products-section-next-container.swiper-button-outside{right:-14px}.products-section-prev-container.swiper-button-outside{left:-14px}}
+@media(max-width:1024px){
+.heading-block{margin-bottom:22px}
+.product-price-display,.product-price-main{font-size:26px}
+.section-icon-text .icon-text-item:after{top:17px;right:15px}
+.rom-facts{grid-template-columns:repeat(2,1fr)}
+footer.section-footer .footer-content{padding-top:42px}
+}
+@media(min-width:641px) and (max-width:1024px){.rom-seals .rom-facts li:last-child{grid-column:span 2}}
+@media(max-width:640px){
+body{font-size:14px}
+.heading-block{padding-bottom:10px;margin-bottom:18px}
+.product-price-display,.product-price-main{font-size:23px}
+.product-item-name{font-size:14px}
+.product-item-price{font-size:15px}
+.btn,.btn-primary,.btn-secondary{font-size:11px;letter-spacing:.11em;padding:15px 18px}
+.btn-big{padding:17px 22px;font-size:12px}
+.adbar-item,.adbar-marquee-content{font-size:10.5px;letter-spacing:.13em;padding:10px 0}
+.head-row{padding-top:12px;padding-bottom:12px}
+.label,.label-secondary{font-size:9px;padding:6px 8px;letter-spacing:.1em}
+.product-item-discount{font-size:9px;padding:6px 8px}
+.section-icon-text [data-store="banner-services"]{padding-top:24px!important;padding-bottom:24px!important}
+.section-icon-text .icon-text-item{padding:16px 14px 14px}
+.section-icon-text .icon-text-item:after{top:14px;right:13px}
+.rom-manifesto{flex-direction:column;gap:18px;padding:24px 20px}
+.rom-star-lg{width:54px;height:54px;flex:0 0 54px}
+.rom-star-bleed{width:86px;height:86px;right:-24px;top:-24px}
+.rom-seals .rom-lead em{white-space:normal}
+.rom-seals .rom-manifesto-mark{width:112px;max-width:46%}
+.rom-facts{grid-template-columns:1fr}
+.rom-band{margin-bottom:30px;padding:10px 0}
+.rom-signature{flex-direction:column;align-items:flex-start;gap:8px}
+.rom-signature .rom-sep{display:none}
+.rom-origem{flex-direction:column;gap:12px;padding:18px}
+footer.section-footer li{font-size:12.5px;line-height:2.1}
+}
+@media(prefers-reduced-motion:reduce){
+*{transition-duration:.01ms!important;animation-duration:.01ms!important}
+.rom-band-track{animation:none}
+.section-icon-text .icon-text-item-content{animation:none}
+.rom-rv{opacity:1;transform:none}
+}
+.nav-list-link{position:relative;display:inline-block;font-family:Jost,sans-serif!important;font-size:12px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;padding:15px 12px;color:#1C2530!important;transition:color .28s ease-out}
+.product-price-display,.product-price-main{font-family:Jost,sans-serif!important;font-weight:700;font-size:30px;letter-spacing:-.025em;color:#4A6779}
+.product-price-compare{font-family:Jost,sans-serif!important;font-size:15px;color:#6B6963;text-decoration:line-through;font-weight:400}
+.product-installments,.product-payments-link{font-family:Jost,sans-serif!important;font-size:13px;color:#59574F}
+.btn-variant{border-radius:0!important;border:1px solid rgba(28,37,48,.28)!important;padding:0 10px!important;min-width:52px;height:34px;margin:0 6px 6px 0;font-family:Jost,sans-serif!important;font-size:11px;letter-spacing:.1em;background:transparent;transition:border-color .25s ease-out,background-color .25s ease-out,color .25s ease-out}
+.btn-variant.selected{background:#1C2530!important;color:#F5F2EC!important;border-color:#1C2530!important}
+.btn-variant-content{line-height:32px;padding:0;margin:0}
+.product-thumb{border:1px solid transparent;opacity:.55;transition:opacity .28s ease-out,border-color .28s ease-out}
