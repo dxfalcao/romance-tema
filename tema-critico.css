@@ -116,7 +116,7 @@ footer.section-footer li{font-size:12.5px;line-height:2.1}
 *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 .rom-band-track{animation:none}
 .section-icon-text .icon-text-item-content{animation:none}
-.rom-rv{opacity:1;transform:none}
+.rom-js .rom-rv{opacity:1;transform:none}
 }
 .nav-list-link{position:relative;display:inline-block;font-family:Jost,sans-serif!important;font-size:12px;font-weight:500;letter-spacing:.11em;text-transform:uppercase;padding:15px 12px;color:#1C2530!important;transition:color .28s ease-out}
 .product-price-display,.product-price-main{font-family:Jost,sans-serif!important;font-weight:700;font-size:30px;letter-spacing:-.025em;color:#4A6779}

@@ -516,5 +516,5 @@ footer.section-footer li{font-size:12.5px;line-height:2.1}
 *{transition-duration:.01ms!important;animation-duration:.01ms!important}
 .rom-band-track{animation:none}
 .section-icon-text .icon-text-item-content{animation:none}
-.rom-rv{opacity:1;transform:none}
+.rom-js .rom-rv{opacity:1;transform:none}
 }
