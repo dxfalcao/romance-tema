@@ -1,8 +1,11 @@
 <!-- Romance Enxovais · rodape (fonte: selo-rodape.html em github.com/dxfalcao/romance-tema).
      O CSS critico ja esta inline no "CSS personalizado"; aqui entra o tema.css completo SEM bloquear a primeira pintura,
-     e o tema.js. As fontes Jost/Parisienne vem por @font-face no CSS critico (nao precisa mais do link do Google Fonts). -->
+     e o tema.js. As fontes Jost/Parisienne vem por @font-face no CSS critico (nao precisa mais do link do Google Fonts);
+     os 2 preloads abaixo pedem os woff2 cedo (a Jost e variavel: um arquivo cobre 300-700). -->
 <link rel="preload" href="https://dxfalcao.github.io/romance-tema/tema.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://dxfalcao.github.io/romance-tema/tema.css"></noscript>
+<link rel="preload" href="https://fonts.gstatic.com/s/jost/v20/92zatBhPNqw73oTd4g.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="https://fonts.gstatic.com/s/parisienne/v14/E21i_d3kivvAkxhLEVZpQyhwDw.woff2" as="font" type="font/woff2" crossorigin>
 
 <div class="rom-seals">
   <div class="rom-band" aria-hidden="true">
