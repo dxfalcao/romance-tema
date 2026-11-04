@@ -1,0 +1,22 @@
+<!-- Romance Enxovais · texto da categoria (fonte: bloco-categoria.html em github.com/dxfalcao/romance-tema).
+     O tema Ipanema nao exibe a descricao da categoria; este bloco busca categorias.json (gerado por
+     scripts/seo/gerar-textos-json.mjs no Pedidos) e injeta o texto da categoria atual pela URL. -->
+<div id="rom-cat-texto" class="rom-cat-texto" hidden></div>
+<style>
+.rom-cat-texto{max-width:72ch;margin:0 auto;padding:8px 16px 40px;font-family:Jost,'DM Sans',sans-serif;color:#2b2b2b;line-height:1.65}
+.rom-cat-texto h2{font-family:Jost,'DM Sans',sans-serif;font-weight:500;font-size:1.35rem;letter-spacing:.02em;margin:0 0 .8em}
+.rom-cat-texto p{margin:0 0 1em;font-size:.98rem}
+.rom-cat-texto a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+.rom-cat-texto a:hover{opacity:.75}
+@media(min-width:768px){.rom-cat-texto{padding:16px 24px 56px}.rom-cat-texto h2{font-size:1.6rem}}
+</style>
+<script>
+(function(){
+  var caixa=document.getElementById('rom-cat-texto');if(!caixa)return;
+  var url=location.pathname.replace(/^\/br(?=\/)/,'');if(url.slice(-1)!=='/')url+='/';
+  fetch('https://dxfalcao.github.io/romance-tema/categorias.json',{cache:'default'}).then(function(r){return r.ok?r.json():null}).then(function(d){
+    var t=d&&d[url];if(!t)return;
+    caixa.innerHTML='<h2>'+t.titulo+'</h2>'+t.html;caixa.hidden=false;
+  }).catch(function(){});
+})();
+</script>
