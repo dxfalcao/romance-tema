@@ -1,0 +1,51 @@
+[
+ {
+  "url": "/cama1/",
+  "id": 40737428,
+  "modelo": "cat-cama1",
+  "arquivo": "modelos/cama1.html",
+  "chars": 1527
+ },
+ {
+  "url": "/banho/",
+  "id": 41035362,
+  "modelo": "cat-banho",
+  "arquivo": "modelos/banho.html",
+  "chars": 1377
+ },
+ {
+  "url": "/mesa/",
+  "id": 41035365,
+  "modelo": "cat-mesa",
+  "arquivo": "modelos/mesa.html",
+  "chars": 1286
+ },
+ {
+  "url": "/decoracao/",
+  "id": 41035363,
+  "modelo": "cat-decoracao",
+  "arquivo": "modelos/decoracao.html",
+  "chars": 1205
+ },
+ {
+  "url": "/aromas/",
+  "id": 41034840,
+  "modelo": "cat-aromas",
+  "arquivo": "modelos/aromas.html",
+  "chars": 1445
+ },
+ {
+  "url": "/kids-e-baby/",
+  "id": 41035364,
+  "modelo": "cat-kids-e-baby",
+  "arquivo": "modelos/kids-e-baby.html",
+  "chars": 1146
+ },
+ {
+  "url": "/tapete/",
+  "id": 40897240,
+  "modelo": "cat-tapete",
+  "arquivo": "modelos/tapete.html",
+  "chars": 1083
+ }
+]
